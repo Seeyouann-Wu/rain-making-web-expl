@@ -55,8 +55,11 @@ function draw() {
   image(headlineForecast, headlineX, headlineY, headlineWidth, headlineHeight);
   
   //css
-  discription.style('padding', headlineX + 'px');
-  button.center('horizontal');
+  if (frameCount == 1) {
+    discription.style('padding', headlineX + 'px');
+    button.size(100, 20);
+    button.center('horizontal');
+  }
 }
 
 function openWebPage() {
